@@ -1,6 +1,9 @@
 # car
 carクラスの追加実装
 
+<img width="720" height="510" alt="image" src="https://github.com/user-attachments/assets/9169a94e-20c7-43db-bfbd-5224d469b9ff" />
+
+
 -要件-
 ・vehicleクラスに、現在地を管理する変数xを追加すること(初期値は0)
 ・vehicleクラスに、速度を管理する変数velocityを追加すること(初期値は0)
