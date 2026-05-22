@@ -4,8 +4,8 @@ public class Car extends Vehicle {
 
     private int fuel = 50;
 
-    public Car(String name, String color ,int velocity) {
-        super(name, color, velocity);
+    public Car(String name, String color) {
+        super(name, color);
     }
 
     /**ガソリン量を取得する*/

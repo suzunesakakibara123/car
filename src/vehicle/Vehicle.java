@@ -14,10 +14,9 @@ public abstract class Vehicle {
     /** 速度を管理の初期値は0*/
     protected int velocity = 0;
 
-    public Vehicle(String name, String color, int velocity) {
+    public Vehicle(String name, String color) {
         this.name = name;
         this.color = color;
-        this.velocity = velocity;
     }
 
     /**名前を取得する*/
@@ -30,14 +29,20 @@ public abstract class Vehicle {
         return this.color;
     }
 
-    /**現在地 x を取得する*/
+    /**現在地xを取得する*/
     public int getX() {
         return this.x;
     }
-
-    /**速度 velocity を取得する*/
+    
+    /**速度velocityを取得する*/
     public int getVelocity() {
         return this.velocity;
+    }
+
+
+    /**速度velocityを設定する*/
+    public void setVelocity(int velocity) {
+    	this.velocity = velocity;
     }
 
     /**名前を変更する*/
@@ -71,7 +76,7 @@ public abstract class Vehicle {
     public void printData() {
         System.out.println("名前：" + this.name);
         System.out.println("色：" + this.color);
-        System.out.println("現在地：" + this.x);
+        System.out.println("現在地：" + this.x +"km");
         System.out.println("速度：" + this.velocity + "km/h");
     }
 }
