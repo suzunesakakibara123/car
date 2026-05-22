@@ -1,71 +1,32 @@
 package vehicle;
 
-/**
- * 車を表すクラス
- * 
- * CarクラスはVehicleクラスを継承する
- * つまり、Vehicleが持っている
- * ・名前
- * ・色
- * ・現在地 x
- * ・速度 velocity
- * ・goメソッド
- * ・backメソッド
- * ・diffメソッド
- * を使うことができる
- */
 public class Car extends Vehicle {
 
-    // ガソリン量を管理する変数
-    // 初期値は50L
     private int fuel = 50;
 
-    /**
-     * コンストラクタ
-     * 
-     * Carオブジェクトを作るときに、
-     * 名前と色を受け取る
-     * 
-     * super(name, color) は、
-     * 親クラスであるVehicleのコンストラクタを呼び出している
-     */
-    public Car(String name, String color) {
-        super(name, color);
+    public Car(String name, String color ,int velocity) {
+        super(name, color, velocity);
     }
 
-    /**
-     * ガソリン量を取得するメソッド
-     */
+    /**ガソリン量を取得する*/
     public int getFuel() {
         return this.fuel;
     }
 
-    /**
-     * ガソリン量を変更するメソッド
-     */
+    /**ガソリン量を変更する*/
     public void setFuel(int fuel) {
         this.fuel = fuel;
     }
 
-    /**
-     * 車の情報を表示するメソッド
-     * 
-     * super.printData() で、
-     * 親クラスVehicleのprintDataメソッドを呼び出す
-     * 
-     * その後、Car独自の情報であるガソリン量を表示する
-     */
+    /**車の情報を表示する*/
     @Override
     public void printData() {
+    	/**Vehicleクラスのメソッドを呼び出す*/
         super.printData();
         System.out.println("ガソリン量：" + this.fuel + "L");
     }
 
-    /**
-     * 給油するメソッド
-     * 
-     * 引数 litre に給油する量を受け取る
-     */
+    /**給油時のメソッド*/
     public void charge(int litre) {
         System.out.println(litre + "L給油します");
 
